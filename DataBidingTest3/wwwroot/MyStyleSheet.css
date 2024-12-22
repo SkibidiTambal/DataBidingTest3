@@ -1,0 +1,105 @@
+﻿/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Center the main content */
+h1.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Form Styles */
+form {
+    background: linear-gradient(135deg, #ffffff, #dfe9f3);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Form Group */
+.group-form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+    /* Labels */
+    .group-form label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #007bff;
+    }
+
+    /* Input Fields */
+    .group-form input {
+        padding: 12px;
+        border: 2px solid #007bff;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        background-color: #f8f9fa;
+    }
+
+        /* Input Fields Focus */
+        .group-form input:focus {
+            border-color: #00bcd4;
+            box-shadow: 0 0 8px #00bcd4;
+            outline: none;
+            background-color: #e3f2fd;
+        }
+
+/* Button */
+button[type="submit"] {
+    background: linear-gradient(135deg, #007bff, #00bcd4);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    font-weight: bold;
+}
+
+    /* Button Hover */
+    button[type="submit"]:hover {
+        background: linear-gradient(135deg, #0056b3, #008ba3);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+/* Validation Messages */
+.validation-summary-valid {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Paragraphs */
+p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Add Fancy Border for the Form */
+form {
+    border: 3px solid #007bff;
+    background: linear-gradient(135deg, #ffffff, #dfe9f3);
+}

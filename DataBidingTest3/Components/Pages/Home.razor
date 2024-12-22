@@ -1,0 +1,71 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+<h1 class="text-center">Hello, please log in</h1>
+
+<p> Your First Name is : @user.FirstName</p>
+<p> Your First Name is : @user.LastName</p>
+
+
+<EditForm Model="user" OnInvalidSubmit="HandleSubmit">
+
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="group-form">
+
+        <label for="FirstName" class="form-label">First Name</label>
+        <input type="text" @bind-value="user.FirstName" id="FirstName" name="First Name" placeholder="Enter your First Name" required>
+
+    </div>
+
+    <div class="group-form">
+
+        <label for="LastName" class="form-label">Last Name</label>
+        <input type="text" @bind-value="user.LastName" id="LastName" name="Last Name" placeholder="Enter your Last Name" required>
+
+    </div>
+
+    <div class="group-form">
+
+        <label for="Email" class="form-label">e-mail </label>
+        <input type="email" @bind-value="user.Email" id="e-mail" name="e-mail" placeholder="Enter your e-mail" required>
+
+    </div>
+
+    <div class="group-form">
+
+        <label for="password" class="form-label"> password</label>
+        <input type="password" @bind-value="user.Password" id="password" name="password" placeholder="Enter your Password" required>
+
+    </div>
+
+    <button type="submit">Submit</button>
+
+</EditForm>
+
+
+
+
+
+
+
+
+
+
+@code
+{
+
+
+
+    private UserModel user = new UserModel();
+
+    private void HandleSubmit()
+    {
+        Console.WriteLine($"Submitted: {user.Email} {user.Password}");
+
+        Navigation.NavigateTo("/Success");
+    }
+
+}
+
